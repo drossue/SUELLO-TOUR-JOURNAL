@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebu-Bohol Educational Tour Journal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== VARIABLES & RESET ===== */
+        :root {
+            --pastel-brown: #e6d5c8;
+            --pastel-green: #d8e2dc;
+            --baby-pink: #f8e1e7;
+            --sage-green: #c8d5b9;
+            --cream: #f9f5f0;
+            --soft-brown: #d4b5a0;
+            --dark-brown: #8b7355;
+            --text: #5a4a3a;
+            --shadow: 0 4px 12px rgba(139, 115, 85, 0.1);
+            --shadow-lg: 0 8px 25px rgba(139, 115, 85, 0.15);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--pastel-green) 100%);
+            overflow-x: hidden;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--dark-brown);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark-brown);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--baby-pink), var(--sage-green));
+            border-radius: 3px;
+        }
+
+        /* ===== TEXT JUSTIFICATION ===== */
+        .section-content p,
+        .timeline-content p,
+        .feature-card p,
+        .reflection-intro p,
+        .final-thoughts p,
+        .highlight-box p,
+        .mission-box p,
+        .vision-box p,
+        .company-header p,
+        .reflection-card p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* ===== WELCOME SCREEN ===== */
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--baby-pink) 0%, var(--pastel-green) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1000;
+            padding: 2rem;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-content {
+            max-width: 700px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .journal-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .journal-logo i {
+            font-size: 3.5rem;
+            color: var(--dark-brown);
+            background: var(--cream);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        .journal-logo h1 {
+            font-size: 3.2rem;
+            background: linear-gradient(135deg, var(--dark-brown), var(--sage-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .welcome-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-brown);
+        }
+
+        .welcome-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--baby-pink), var(--sage-green));
+            color: var(--dark-brown);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: var(--transition);
+            margin: 0 auto;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== HEADER ===== */
+        /* ===== HEADER ===== */
+.main-header {
+    background: linear-gradient(135deg, var(--baby-pink) 0%, var(--pastel-green) 100%);
+    color: var(--dark-brown);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
+    display: none;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Center the text container */
+.header-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* ===== PROFILE PICTURE ===== */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto; /* Pushes it to the right */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .header-text {
+        position: relative;
+        left: auto;
+        transform: none;
+        order: 1;
+    }
+    
+    .profile-container {
+        margin-left: 0;
+        justify-content: center;
+        order: 2;
+    }
+    
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+}
+
+        /* ===== PROFILE PICTURE ===== */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .profile-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--cream);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .profile-pic:active {
+            transform: scale(0.95);
+        }
+
+        /* ===== PROFILE MODAL ===== */
+        .profile-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .profile-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--pastel-green) 100%);
+            border-radius: var(--radius);
+            padding: 3.5rem;
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: scaleIn 0.4s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.2rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            transform: scale(1.1);
+            color: var(--text);
+        }
+
+        .modal-profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--baby-pink);
+            box-shadow: var(--shadow-lg);
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+
+        .modal-name {
+            font-size: 2rem;
+            color: var(--dark-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-title {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .modal-details {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 1.5rem;
+            text-align: left;
+            border: 1px solid var(--pastel-brown);
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--pastel-green);
+        }
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .detail-item i {
+            color: var(--baby-pink);
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--baby-pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-brown);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--pastel-green);
+            transform: translateY(-3px);
+        }
+
+        .floral-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23f9f5f0'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        /* ===== NEW FORMAT: SIDEBAR NAVIGATION ===== */
+        .page-container {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 120px;
+            display: none; /* Hidden by default, shown after welcome screen */
+        }
+
+        /* FIXED SIDEBAR WITH SCROLLING */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, var(--pastel-brown) 0%, var(--cream) 100%);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 100;
+            position: sticky;
+            top: 120px;
+            height: calc(100vh - 120px);
+            overflow-y: auto; /* FIX: Allows sidebar to scroll independently */
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--pastel-green);
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: white;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid var(--pastel-green);
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            transform: translateX(5px);
+            background: var(--baby-pink);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-item.active {
+            background: linear-gradient(135deg, var(--baby-pink), var(--pastel-green));
+            color: var(--dark-brown);
+            font-weight: 600;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-icon i {
+            color: var(--dark-brown);
+        }
+
+        /* ===== MAIN CONTENT AREA ===== */
+        .main-content-area {
+            flex: 1;
+            padding: 2rem;
+            background: var(--cream);
+            overflow-y: auto; /* FIX: Allows main content to scroll independently */
+            max-height: calc(100vh - 120px); /* Prevents it from exceeding viewport */
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.6s ease;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--pastel-brown);
+        }
+
+        /* ===== OVERVIEW SECTION ===== */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--pastel-green);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--baby-pink), var(--pastel-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: var(--dark-brown);
+        }
+
+        .feature-card h3 {
+            color: var(--dark-brown);
+            margin-bottom: 1rem;
+        }
+
+        /* ===== TIMELINE SECTION ===== */
+        .vertical-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .vertical-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--baby-pink), var(--pastel-green));
+            border-radius: 3px;
+        }
+
+        .timeline-event {
+            display: flex;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 2rem;
+            z-index: 2;
+            box-shadow: var(--shadow);
+            border: 3px solid var(--pastel-green);
+        }
+
+        .timeline-marker i {
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--pastel-brown);
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: var(--baby-pink);
+            color: var(--dark-brown);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== COMPANY JOURNAL SECTION ===== */
+        .company-journal-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .company-journal-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .company-tab {
+            background: white;
+            border: 2px solid var(--pastel-brown);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .company-tab.active {
+            background: var(--baby-pink);
+            color: var(--dark-brown);
+            border-color: var(--baby-pink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .company-tab:hover:not(.active) {
+            background: var(--pastel-green);
+            transform: translateY(-2px);
+        }
+
+        .company-journal-content {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            border: 1px solid var(--pastel-brown);
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* FIXED: CENTERED COMPANY HEADER */
+        .company-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--pastel-green);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .company-date {
+            display: inline-block;
+            background: var(--baby-pink);
+            color: var(--dark-brown);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .company-name {
+            color: var(--dark-brown);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .company-header .facilitator {
+            color: var(--text);
+            font-size: 1.1rem;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        /* FIXED: CENTERED LINE BELOW COMPANY NAME */
+        .company-header h2 {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .company-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--baby-pink), var(--sage-green));
+            border-radius: 3px;
+        }
+
+        .journal-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--pastel-brown);
+        }
+
+        .journal-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+            color: var(--dark-brown);
+        }
+
+        .section-title i {
+            color: var(--baby-pink);
+            font-size: 1.2rem;
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: var(--pastel-green);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--baby-pink);
+        }
+
+        .highlight-box h4 {
+            color: var(--dark-brown);
+            margin-bottom: 0.8rem;
+        }
+
+        .company-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--baby-pink), var(--pastel-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .company-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mission-box, .vision-box {
+            background: var(--pastel-green);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--baby-pink);
+        }
+
+        .mission-box h4, .vision-box h4 {
+            color: var(--dark-brown);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-controls {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--pastel-brown);
+            padding: 0.7rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .filter-btn.active {
+            background: var(--baby-pink);
+            color: var(--dark-brown);
+            border-color: var(--baby-pink);
+        }
+
+        .photo-count {
+            background: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--pastel-brown);
+        }
+
+        .masonry-gallery {
+            columns: 4 250px;
+            column-gap: 1.5rem;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid var(--pastel-brown);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* FIXED: CENTERED IMAGES WITH TEXT */
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .photo-location {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .photo-date {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .load-more-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .load-more-btn {
+            background: linear-gradient(135deg, var(--baby-pink), var(--pastel-green));
+            color: var(--dark-brown);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .load-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== REFLECTION SECTION ===== */
+        .reflection-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reflection-intro {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.1rem;
+            border: 1px solid var(--pastel-brown);
+        }
+
+        .reflection-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .reflection-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--pastel-brown);
+            transition: var(--transition);
+        }
+
+        .reflection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .reflection-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--baby-pink), var(--pastel-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .reflection-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .reflection-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .reflection-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--pastel-brown);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .reflection-card li:before {
+            content: '•';
+            color: var(--baby-pink);
+            position: absolute;
+            left: 0;
+        }
+
+        .reflection-card li:last-child {
+            border-bottom: none;
+        }
+
+        .final-thoughts {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--pastel-brown);
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--dark-brown);
+            color: var(--cream);
+            padding: 1rem 1rem;
+            margin-top: 3rem;
+            text-align: center;
+            display: none; /* Hidden by default, shown after welcome screen */
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-text h3 {
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-btn {
+            background: var(--baby-pink);
+            color: var(--dark-brown);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .footer-btn:hover {
+            background: var(--pastel-green);
+            transform: translateY(-2px);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .page-container {
+                flex-direction: column;
+                padding-top: 100px;
+            }
+            
+            /* FIXED: Mobile sidebar styling */
+            .sidebar {
+                width: 100%;
+                padding: 1.5rem;
+                height: auto; /* Changed from fixed height to auto */
+                position: relative; /* Changed from sticky */
+                overflow-y: visible;
+                top: 0;
+                box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+                margin-bottom: 0;
+            }
+            
+            .sidebar-nav {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+                scrollbar-width: thin;
+            }
+            
+            .nav-item {
+                flex: 0 0 auto;
+                white-space: nowrap;
+                min-width: 140px;
+            }
+            
+            /* FIXED: Main content area for mobile */
+            .main-content-area {
+                overflow-y: visible; /* Changed from auto */
+                max-height: none; /* Remove height restriction */
+                padding: 1.5rem;
+            }
+            
+            .main-header {
+                padding: 1rem 1.5rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .header-text {
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .profile-container {
+                justify-content: center;
+            }
+            
+            .profile-pic {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .modal-content {
+                padding: 2rem;
+                width: 95%;
+            }
+            
+            .modal-profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .modal-name {
+                font-size: 1.8rem;
+            }
+            
+            .masonry-gallery {
+                columns: 2 200px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-event {
+                flex-direction: column;
+            }
+            
+            .timeline-marker {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .company-journal-nav {
+                justify-content: center;
+            }
+            
+            .company-journal-content {
+                padding: 1.5rem;
+            }
+            
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .company-header h2::after {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .profile-pic {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+            
+            .modal-profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .modal-name {
+                font-size: 1.5rem;
+            }
+            
+            .masonry-gallery {
+                columns: 1;
+            }
+            
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+            
+            .lightbox-prev {
+                left: 10px;
+            }
+            
+            .lightbox-next {
+                right: 10px;
+            }
+            
+            .company-tab {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .company-header h2::after {
+                width: 60px;
+            }
+            
+            .sidebar-nav {
+                gap: 0.5rem;
+            }
+            
+            .nav-item {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WELCOME SCREEN -->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="journal-logo">
+                <i class="fas fa-scroll"></i>
+                <h1>Tour Journal</h1>
+            </div>
+            <h2>Cebu–Bohol Educational Tour</h2>
+            <p>Embark on a visual journey through my BSIT educational adventure</p>
+            <button id="start-button" class="cta-button">
+                <span>Begin Journey</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <!-- REMOVED: .floral-decoration div with "Scroll to explore" -->
+    </div>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Cebu–Bohol Educational Tour</h1>
+                <p class="subtitle">A BSIT Student's Journey • November 2025</p>
+            </div>
+            
+            <!-- PROFILE PICTURE -->
+            <div class="profile-container">
+                <!-- REPLACE "profile-placeholder.jpg" WITH YOUR ACTUAL PROFILE PICTURE -->
+                <img src="pfp.jpg" alt="Student Profile" class="profile-pic" id="profile-trigger">
+            </div>
+        </div>
+        <div class="floral-border"></div>
+    </header>
+
+    <!-- PROFILE MODAL -->
+    <div class="profile-modal" id="profile-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <!-- REPLACE "profile-placeholder.jpg" WITH THE SAME PROFILE PICTURE PATH -->
+            <img src="pfp.jpg" alt="Student Profile" class="modal-profile-pic">
+            <h2 class="modal-name">Diana Rose D. Suello</h2>
+            <p class="modal-title">BSIT 3A • Educational Tour Participant</p>
+            
+            <div class="modal-details">
+                <div class="detail-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span><strong>Program:</strong> Bachelor of Science in Information Technology</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-university"></i>
+                    <span><strong>School:</strong> Holy Cross of Davao College</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span><strong>Tour Dates:</strong> November 19-22, 2025</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>Locations:</strong> Cebu & Bohol, Philippines</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link" title="GitHub">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link" title="Portfolio">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW FORMAT: SIDEBAR + CONTENT -->
+    <div class="page-container">
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Tour Journal</h2>
+                <p>Navigate through my journey</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="overview">
+                    <div class="nav-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <span>Tour Overview</span>
+                </a>
+                <a href="#" class="nav-item" data-target="timeline">
+                    <div class="nav-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <span>Daily Timeline</span>
+                </a>
+                <a href="#" class="nav-item" data-target="company-journal">
+                    <div class="nav-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <span>Company Journal</span>
+                </a>
+                <a href="#" class="nav-item" data-target="gallery">
+                    <div class="nav-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <span>Photo Gallery</span>
+                </a>
+                <a href="#" class="nav-item" data-target="reflection">
+                    <div class="nav-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span>Reflections</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content-area">
+            <!-- OVERVIEW SECTION -->
+            <section id="overview" class="content-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-compass"></i> Tour Overview</h2>
+                    <p>Discover the highlights and purpose of our educational journey</p>
+                </div>
+                
+                <div class="overview-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educational Purpose</h3>
+                        <p>This tour bridges classroom learning with real-world IT industry exposure, providing invaluable insights into career paths and professional environments.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Destinations</h3>
+                        <p>We explored both Cebu and Bohol, visiting IT companies, cultural landmarks, and natural wonders that enriched our understanding of the Philippines' tech landscape.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Team Experience</h3>
+                        <p>Traveling with classmates created bonds and shared learning experiences that enhanced both personal growth and academic understanding.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TIMELINE SECTION -->
+            <section id="timeline" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Daily Timeline</h2>
+                    <p>Follow our day-by-day adventures and learning experiences</p>
+                </div>
+
+                <div class="vertical-timeline">
+                    <div class="timeline-event">
+                        <div class="timeline-marker">
+                            <i class="fas fa-plane-arrival"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">November 19, 2025</span>
+                            <h3>Arrival & Worldtech Information Solutions Visit</h3>
+                            <p>Our educational journey began with arrival in Cebu and our first company immersion at Worldtech Information Solutions, Inc. We explored the IT consultancy's operations, learned about cybersecurity practices, and gained insight into professional IT environments, linking classroom knowledge with real-world applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-marker">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">November 20, 2025</span>
+                            <h3>CodeChum & Rivan IT Cebu Visits</h3>
+                            <p>We spent the day visiting CodeChum, an educational technology platform that makes learning programming engaging, followed by Rivan IT Cebu, a training center specializing in networking and IT certifications. Through interactive sessions and hands-on activities, we developed a deeper understanding of coding, networking, and IT career paths, while being inspired by the passion and dedication of industry professionals.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-marker">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">November 21, 2025</span>
+                            <h3>Mata Technologies Visit</h3>
+                            <p>Our immersion continued with Mata Technologies, Inc., a pioneer in virtual tours and VR mapping for real estate and tourism. We observed how technology, design, and creativity merge to create immersive experiences, and learned how innovative solutions can enhance tourism promotion and real estate marketing in the Philippines.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-marker">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">November 22, 2025</span>
+                            <h3>City Disaster Risk Reduction and Management Office (CDRRMO)</h3>
+                            <p>We concluded the day with a visit to City Disaster Risk Reduction and Management Offices (CDRRMOs), the disaster response and emergency unit in Bohol. We witnessed their monitoring operations, learned about emergency preparedness, and understood how technology and teamwork ensure the safety of the community and tourists alike.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMPANY JOURNAL SECTION -->
+            <section id="company-journal" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-building"></i> Company Journal</h2>
+                    <p>Detailed documentation of each company visit and key learnings</p>
+                </div>
+
+                <div class="company-journal-container">
+                    <div class="company-journal-nav">
+                        <button class="company-tab active" data-company="worldtech">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>WorldTech</span>
+                        </button>
+                        <button class="company-tab" data-company="codechum">
+                            <i class="fas fa-code"></i>
+                            <span>CodeChum</span>
+                        </button>
+                        <button class="company-tab" data-company="rivan">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Rivan IT</span>
+                        </button>
+                        <button class="company-tab" data-company="mata">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <span>Mata Technologies</span>
+                        </button>
+                        <button class="company-tab" data-company="tagbilaran">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>City Disaster Risk Reduction and Management Offices (CDRRMOs)</span>
+                        </button>
+                    </div>
+
+                    <!-- WORLD TECH JOURNAL -->
+                    <div class="company-journal-content" id="worldtech-journal">
+                        <div class="company-header">
+                            <div class="company-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span class="company-date">Day 1 – November 19, 2025</span>
+                            <h2 class="company-name">WorldTech Information Solutions, Inc.</h2>
+                            <p class="facilitator">Facilitator: <strong>Mrs. Elizabeth</strong></p>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Company Overview
+                            </h3>
+                            <div class="section-content">
+                                <p>Worldtech Information Solutions, Inc. is a Philippine-based IT consultancy and training company with offices in Cebu, Manila, and an international presence in Australia and Singapore. The company specializes in IT consulting, cybersecurity solutions, and professional training, including authorized certification programs in Microsoft, Cisco, and VMware technologies. Serving banks, government agencies, schools, and large enterprises, Worldtech provides strategic IT guidance and workforce skills development. The company emphasizes cybersecurity, operational technology protection, and capacity building, supported by a team of experienced consultants and certified trainers.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-search"></i>
+                                Observations
+                            </h3>
+                            <div class="section-content">
+                                <p>During our visit, I noticed that the office was compact but efficiently organized, filled with older networking equipment such as routers, switches, and servers, which showed that even small setups could manage complex IT tasks.</p>
+                                <p>Mrs. Elizabeth warmly welcomed us and shared her journey in the IT industry, emphasizing the importance of continuous learning and staying updated in technology trends. She discussed the challenges of cybersecurity in today's digital age, demonstrating how hackers are tracked, how security incidents are managed, and how threats are prevented in real time.</p>
+                                <p>I found it interesting that cybersecurity is not just about technology but also about awareness, teamwork, and proper protocols.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Key Learnings
+                            </h3>
+                            <div class="section-content">
+                                <div class="highlight-box">
+                                    <h4>Company Recognition & Expertise</h4>
+                                    <p>Worldtech is highly recognized in the field of cybersecurity, with over 10 years of accreditation. They are proud holders of the DICT Cybersecurity Bureau recognition in the Philippines and CREST CAMP certifications from the United Nations. Each employee carries different professional certificates, reflecting their commitment to excellence.</p>
+                                </div>
+                                
+                                <p>From this visit, I learned that even simple online actions—like using weak passwords or sharing personal information—can expose us to risks. It made me more aware of protecting my personal data, being vigilant online, and understanding that cybersecurity is a shared responsibility.</p>
+                                
+                                <p>I also realized that the IT industry requires not only technical skills but also critical thinking, discipline, and constant adaptation to new challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CODECCHUM JOURNAL -->
+                    <div class="company-journal-content" id="codechum-journal" style="display: none;">
+                        <div class="company-header">
+                            <div class="company-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="company-date">Day 2 – November 20, 2025</span>
+                            <h2 class="company-name">CodeChum (Ladechum)</h2>
+                            <p class="facilitator">Facilitator: <strong>Xavier David Maranga</strong></p>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Company Overview
+                            </h3>
+                            <div class="section-content">
+                                <p>CodeChum is an educational technology platform based in Cebu, Philippines, designed to make learning programming accessible and engaging for students and teachers. The platform supports various programming languages such as C, C++, Java, Python, and JavaScript. It offers tools for automatic code checking, student performance monitoring, and cheating prevention. Widely used in over 100 schools across the Philippines, CodeChum provides a mobile-friendly interface, a self-study area with AI assistance, and certification opportunities. Founded by Jemar Jude Maranga, the platform aims to empower students and educators by simplifying coding education, enhancing teaching efficiency, and preparing Filipino youth for careers in technology.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-search"></i>
+                                Observations
+                            </h3>
+                            <div class="section-content">
+                                <p>During our visit, I observed the Chief Product Officer sharing his journey with great passion and energy. He spoke about how his childhood experiences shaped his interest in technology and how he discovered his purpose in coding.</p>
+                                <p>His storytelling was simple yet powerful, inspiring everyone in the room. Listening to him made me reflect on my own goals and motivated me to embrace personal challenges. He also shared opportunities for growth in IT, encouraging us to explore, experiment, and learn continuously.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Key Learnings
+                            </h3>
+                            <div class="section-content">
+                                <p>From this visit, I realized that passion often starts with small experiences and grows through curiosity, consistency, and exploration. The Chief Product Officer emphasized the importance of resilience, courage, and learning from failures, especially in a startup environment.</p>
+                                <p>His story inspired me to take IT seriously, pursue my goals with dedication, and remain open to challenges that help me grow both personally and professionally.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIVAN IT JOURNAL -->
+                    <div class="company-journal-content" id="rivan-journal" style="display: none;">
+                        <div class="company-header">
+                            <div class="company-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <span class="company-date">Day 2 – November 20, 2025</span>
+                            <h2 class="company-name">Rivan IT Cebu</h2>
+                            <p class="facilitator">Facilitator: <strong>Mr. Vincent Victor</strong></p>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Company Overview
+                            </h3>
+                            <div class="section-content">
+                                <p>Rivan IT Cebu is a training center under the network of Rivan School of Technology Inc., established in 1999. It specializes in IT and networking certification courses, including Cisco CCNA/CCNP, Linux, security, and VoIP. The center is ideal for students and professionals looking to build practical skills in networking, IT infrastructure, and IT-hardware integration. While it is focused more on the IT/networking side of electronics, it provides valuable hands-on experience for understanding how devices, servers, and networks operate in real-world environments.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-search"></i>
+                                Observations
+                            </h3>
+                            <div class="section-content">
+                                <p>During our visit, we were guided through basic networking configurations using Cisco devices. The instructor explained each step clearly, showing how to properly connect cables and configure devices to ensure smooth network functionality.</p>
+                                <p>Seeing the actual hardware and observing how different components interact made the learning experience more tangible and engaging. The hands-on setup allowed us to connect theory from the classroom with real-world applications in IT and networking.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Key Learnings
+                            </h3>
+                            <div class="section-content">
+                                <p>From this visit, I learned how to configure basic network settings and gained insight into how a call center setup operates. The activity taught me that networking requires patience, attention to detail, and logical thinking.</p>
+                                <p>I also realized the importance of practical skills in IT and how foundational knowledge in networking can be a stepping stone toward more advanced technical roles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MATA TECHNOLOGIES JOURNAL -->
+                    <div class="company-journal-content" id="mata-journal" style="display: none;">
+                        <div class="company-header">
+                            <div class="company-icon">
+                                <i class="fas fa-vr-cardboard"></i>
+                            </div>
+                            <span class="company-date">Day 3 – November 21, 2025</span>
+                            <h2 class="company-name">Mata Technologies, Inc.</h2>
+                            <p class="facilitator">Facilitator: <strong>Company Team</strong></p>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Company Overview
+                            </h3>
+                            <div class="section-content">
+                                <p>Mata Technologies Inc. is a homegrown provider of virtual tours for real estate and virtual reality maps for tourist destinations in the Philippines. The company derives its name from the Filipino word "mata," meaning "eyes," reflecting its goal of giving users immersive previews of real estate properties and notable destinations.</p>
+                                
+                                <div class="mission-vision-grid">
+                                    <div class="mission-box">
+                                        <h4><i class="fas fa-bullseye"></i> Mission</h4>
+                                        <p><strong>Tourism:</strong> To create virtual maps of tourist destinations across the Philippines, highlighting both well-known attractions and hidden gems, and promoting sustainable tourism.</p>
+                                        <p><strong>Real Estate:</strong> To deliver world-class, interactive, and user-friendly virtual tours of real estate properties.</p>
+                                    </div>
+                                    
+                                    <div class="vision-box">
+                                        <h4><i class="fas fa-eye"></i> Vision</h4>
+                                        <p><strong>Tourism:</strong> To positively impact the tourism industry through virtual reality and immersive experiences.</p>
+                                        <p><strong>Real Estate:</strong> To make virtual tours and maps a standard in the real estate sector in the Philippines.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-search"></i>
+                                Observations
+                            </h3>
+                            <div class="section-content">
+                                <p>The Mata Technologies office was well-organized, with dedicated spaces for editing, design, and project creation. We were shown a room where they showcased their previous projects, highlighting their innovative work.</p>
+                                <p>The staff demonstrated a mix of professionalism and creativity, reflecting their dedication to producing high-quality virtual experiences. Their project "Savoy Cebu" showcased how virtual reality and mapping technology can enhance tourism promotion in an engaging and interactive way.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Key Learnings
+                            </h3>
+                            <div class="section-content">
+                                <p>From this visit, I learned how virtual maps and immersive experiences can transform the way people explore places. Combining graphic design, technology, and creativity allows companies like Mata Technologies to create impactful solutions for both tourism and real estate.</p>
+                                <p>I also observed how each staff member has a specific role in ensuring that the projects are executed efficiently and effectively. The visit reinforced the importance of teamwork, innovation, and applying technology to improve real-world experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAGBILARAN 911 JOURNAL -->
+                    <div class="company-journal-content" id="tagbilaran-journal" style="display: none;">
+                        <div class="company-header">
+                            <div class="company-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <span class="company-date">Day 4 – November 22, 2025</span>
+                            <h2 class="company-name">City Disaster Risk Reduction and Management Office</h2>
+                            <h3 class="company-name" style="font-size: 1.5rem; margin-top: -0.5rem;">City Disaster Risk Reduction and Management Offices (CDRRMOs)</h3>
+                            <p class="facilitator">Tourist Assistance and Rescue Section, Immediate Emergency Responders</p>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Company Overview
+                            </h3>
+                            <div class="section-content">
+                                <p>City Disaster Risk Reduction and Management Offices (CDRRMOs), which stands for Tourist Assistance and Rescue Section, Immediate Emergency Responders, is an emergency response and disaster management unit established by the Provincial Government of Bohol. Its primary mission is to ensure the safety and security of both locals and tourists by providing immediate assistance during emergencies, such as accidents, natural disasters, and medical situations. Operating 24/7 through the emergency hotline 117, the unit is composed of trained responders equipped for rescue, first aid, and disaster operations. The office also collaborates closely with the Philippine National Police (PNP), Bureau of Fire Protection (BFP), and the Department of Tourism (DOT) to promote public safety and maintain a secure environment for visitors in Bohol.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-search"></i>
+                                Observations
+                            </h3>
+                            <div class="section-content">
+                                <p>During our visit, I observed how organized and focused the team was in monitoring the community. Their control room was equipped with multiple CCTV screens, providing 24/7 surveillance coverage of the city.</p>
+                                <p>The staff remained alert at all times, carefully monitoring every area. The workplace had a serious and professional atmosphere, reflecting the team's dedication to keeping Bohol safe.</p>
+                            </div>
+                        </div>
+
+                        <div class="journal-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Key Learnings
+                            </h3>
+                            <div class="section-content">
+                                <p>From this visit, I learned the importance of continuous monitoring in preventing crimes and responding quickly to emergencies. I also realized how technology, like CCTV systems and emergency communication tools, plays a crucial role in community safety.</p>
+                                <p>The experience highlighted that public safety requires teamwork, preparation, and constant vigilance. Understanding the coordination between different agencies showed me how complex emergency response systems operate to protect communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALLERY SECTION -->
+            <section id="gallery" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-images"></i> Photo Gallery</h2>
+                    <p>Visual memories from our educational adventure</p>
+                </div>
+
+                <div class="gallery-controls">
+                    <div class="filter-buttons">
+                        
+                        <button class="filter-btn" data-filter="prelude">Prelude</button>
+                        <button class="filter-btn" data-filter="cebu">Cebu</button>
+                        <button class="filter-btn" data-filter="bohol">Bohol</button>
+                        <button class="filter-btn" data-filter="companies">Companies</button>
+                        <button class="filter-btn" data-filter="journal">Printed Journal</button>
+                        <button class="filter-btn" data-filter="certificates">Certificates</button>
+                    </div>
+                    <div class="photo-count">
+                        <span id="photo-count">Add your photos below!</span>
+                    </div>
+                </div>
+
+                <div class="masonry-gallery" id="photo-gallery">
+                    <!-- Photos will be dynamically loaded here -->
+                </div>
+
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more">
+                        <i class="fas fa-plus"></i> Load More Photos
+                    </button>
+                </div>
+            </section>
+
+            <!-- REFLECTION SECTION -->
+            <section id="reflection" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-heart"></i> Personal Reflections</h2>
+                    <p>Insights and learnings from this transformative journey</p>
+                </div>
+
+                <div class="reflection-content">
+                    <div class="reflection-intro">
+                        <p>This educational tour has been an eye-opening and inspiring experience. Visiting various IT companies and interacting with professionals allowed me to see how the knowledge I've gained in the classroom is applied in real-world situations. I learned the importance of curiosity, passion, and continuous learning in the IT field. Beyond technology, the tour also taught me the value of teamwork, observation, and adaptability, as I navigated new environments and absorbed lessons from different perspectives.</p>
+                    </div> 
+                    
+                    <div class="final-thoughts">
+                        <h3>Final Thoughts</h3>
+                        <p>This journey has been more than just a series of company visits—it has been a meaningful opportunity to connect theory with practice, explore career possibilities, and understand the dynamic nature of the IT industry. Meeting industry experts and seeing how technology solves real-world problems motivated me to work harder and aim higher in my studies. The memories, insights, and inspiration from this tour will remain with me, guiding both my academic growth and my future professional path.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <h3>Cebu–Bohol Educational Tour 2025</h3>
+                <p>Memories that Last a Lifetime</p>
+            </div>
+            <div class="footer-actions">
+                <button class="footer-btn" id="thankyou-trigger">
+                    <i class="fas fa-heart"></i>
+                    Thank You
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FIXED PHOTO DATA WITH PROPER CATEGORY FORMAT
+        const photoData = [
+            // PRELUDE
+            { id: 1, src: "mass-photo.jpg", category: "prelude", location: "Sta. Ana Shrine Parish Church", date: "Our Journey Begins - Nov 18, 2025" },
+            { id: 2, src: "ToAirport.jpg", category: "prelude", location: "Davao", date: "Heading to the Airport - Nov 19, 2025" },
+            { id: 3, src: "AtAirport.jpg", category: "prelude", location: "Davao International Airport", date: "Arrived at Airport - Nov 19, 2025" },
+            { id: 4, src: "outfit check.jpg", category: "prelude", location: "Davao International Airport", date: "Outfit Check - Nov 19, 2025"},
+            { id: 5, src: "mygirls.jpg", category: "prelude", location: "Davao International Airport", date: "Together Before the Journey - Nov 19, 2025"},
+            { id: 6, src: "batch2.jpg", category: "prelude", location: "Davao International Airport", date: "Together Before the Journey - Nov 19, 2025"},
+            { id: 7, src: "batch 2.jpg", category: "prelude", location: "Davao International Airport", date: "Together Before the Journey - Nov 19, 2025"},
+            { id: 8, src: "ticket.jpg", category: "prelude", location: "Davao International Airport", date: "Flight Ticket Secured - Nov 19, 2025"},
+            { id: 9, src: "friends.jpg", category: "prelude", location: "Davao International Airport", date: "Ready to Board - Nov 19, 2025"},
+            { id: 10, src: "checking.jpg", category: "prelude", location: "Davao International Airport", date: "Checking In - Nov 19, 2025"},
+            { id: 11, src: "boarding.jpg", category: "prelude", location: "Davao International Airport", date: "Pre-Boarding - Nov 19, 2025"},
+            { id: 12, src: "first time.jpg", category: "prelude", location: "Davao Airport", date: "Ready for Takeoff - Nov 19, 2025" },
+            { id: 13, src: "prelude.jpg", category: "prelude", location: "", date: "Nov 19, 2025" },
+
+            // CEBU - NON-COMPANY
+            { id: 14, src: "cebuairport.jpg", category: "cebu", location: "Mactan-Cebu International Airport", date: "Landed in Cebu - Nov 19, 2025" },
+            { id: 15, src: "crrr.jpg", category: "cebu", location: "Mactan-Cebu International Airport", date: "Quick Break - Nov 19, 2025" },
+            { id: 16, src: "bus1.jpg", category: "cebu", location: "Cebu-Cordova Link Expressway", date: "Heading to the Tour - Nov 19, 2025" },
+            { id: 17, src: "mactanshrinepark.jpg", category: "cebu", location: "Mactan Shrine", date: "Mactan Shrine - Nov 19, 2025" },
+            { id: 18, src: "mactan1.jpg", category: "cebu", location: "Mactan Shrine", date: "Historical Briefing - Nov 19, 2025" },
+            { id: 19, src: "mactan2.jpg", category: "cebu", location: "Mactan Shrine", date: "Painting of the Battle of Mactan - Nov 19, 2025" },
+            { id: 20, src: "mactan3.jpg", category: "cebu", location: "Mactan Shrine", date: "Historical Briefing on Ferdinand Magellan - Nov 19, 2025" },
+            { id: 21, src: "mactanshrinepark2.jpg", category: "cebu", location: "Mactan Shrine", date: "The Magellan Shrine - Nov 19, 2025" },
+            { id: 22, src: "toseaside.jpg", category: "cebu", location: "Cebu", date: "viewpoint - Nov 19, 2025" },
+
+            // CEBU - SM SEASIDE
+            { id: 23, src: "seaside.jpg", category: "cebu", location: "SM Seaside City", date: "Lunch at SM Seaside City - Nov 19, 2025" },
+            { id: 24, src: "somac3.jpg", category: "cebu", location: "SM Seaside City", date: "Lunch at Somac Korean Buffet - Nov 19, 2025" },
+            { id: 25, src: "somaclunch.jpg", category: "cebu", location: "SM Seaside City", date: "Lunch at Somac Korean Buffet - Nov 19, 2025" },
+            { id: 26, src: "somac2.jpg", category: "cebu", location: "SM Seaside City", date: "Lunch at Somac Korean Buffet - Nov 19, 2025" },
+            { id: 27, src: "hbd2.jpg", category: "cebu", location: "SM Seaside City", date: "November Birthday Celebrants - Nov 19, 2025" },
+            { id: 28, src: "somacc.jpg", category: "cebu", location: "SM Seaside City", date: "Lunch at Somac Korean Buffet - Nov 19, 2025" },
+            { id: 29, src: "to worldtech.jpg", category: "cebu", location: "SM Seaside City", date: "Heading to Our First Destination - Nov 19, 2025" },
+            
+            // WORLDTEACH INC. - BOTH CEBU AND COMPANIES
+            { id: 30, src: "worldtech.jpg", category: ["cebu", "companies"], location: "Cebu City", date: "First Company Visit: WorldTeach Inc. - Nov 19, 2025" },
+            { id: 31, src: "wt.jpg", category: ["cebu", "companies"], location: "Cebu City", date: "Showcasing Professional Certificates - Nov 19, 2025" },
+            { id: 32, src: "wt2.jpg", category: ["cebu", "companies"], location: "Cebu City", date: "First Company Visit: WorldTeach Inc. - Nov 19, 2025" },
+            { id: 33, src: "wt3.jpg", category: ["cebu", "companies"], location: "Cebu City", date: "Nov 19, 2025" },
+            { id: 34, src: "wt4.jpg", category: ["cebu", "companies"], location: "Cebu City", date: "First Company Visit: WorldTeach Inc. - Nov 19, 2025" },
+
+            // CEBU HOTEL
+            { id: 35, src: "bai.jpg", category: "cebu", location: "Mandaue cebu", date: "Hotel Check-In - Nov 19, 2025" },
+            { id: 36, src: "bai2.jpg", category: "cebu", location: "Mandaue cebu", date: "Hotel Check-In - Nov 19, 2025" },
+            { id: 37, src: "bai3.jpg", category: "cebu", location: "Mandaue cebu", date: "Me and My Roommate - Nov 19, 2025" },
+            { id: 38, src: "bai4.jpg", category: "cebu", location: "Mandaue cebu", date: "Hotel Check-In - Nov 19, 2025" },
+            { id: 39, src: "bai5.jpg", category: "cebu", location: "Mandaue cebu", date: "Hotel Check-In - Nov 19, 2025" },
+
+            // CEBU DAY 2 - MORNING
+            { id: 40, src: "DAY2.jpg", category: "cebu", location: "Mandaue cebu", date: "Morning Prep - Nov 20, 2025" },
+            { id: 41, src: "BREAKFAST.jpg", category: "cebu", location: "Mandaue cebu", date: "Early Breakfast Before the Tour - Nov 20, 2025" },
+            { id: 44, src: "FOODS2.jpg", category: "cebu", location: "Mandaue cebu", date: "Nov 20, 2025" },
+            { id: 45, src: "DAY2 VISIT.jpg", category: "cebu", location: "Mandaue cebu", date: "En Route to Day 2 Destination - Nov 20, 2025" },
+            { id: 46, src: "bus2.jpg", category: "cebu", location: "Mandaue cebu", date: "Starting Our Day 2 Company Visit - Nov 20, 2025" },
+            
+            // CODECCHUM - BOTH CEBU AND COMPANIES
+            { id: 47, src: "cit.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Nov 20, 2025" },
+            { id: 48, src: "2ndcompanyvisit.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Nov 20, 2025" },
+            { id: 49, src: "codechum.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Visit to CodeChum with a Brief Talk from the Chief Product Officer Nov 20, 2025" },
+            { id: 50, src: "chief.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Visit to CodeChum with a Brief Talk from the Chief Product Officer - Nov 20, 2025" },
+            { id: 51, src: "chief2.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Visit to CodeChum with a Brief Talk from the Chief Product Officer - Nov 20, 2025" },
+            { id: 52, src: "chief4.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Visit to CodeChum with a Brief Talk from the Chief Product Officer - Nov 20, 2025" },
+            { id: 53, src: "chief3.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Visit to CodeChum with a Brief Talk from the Chief Product Officer - Nov 20, 2025" },
+            { id: 54, src: "chief5.jpg", category: ["cebu", "companies"], location: "Cebu Institute of Technology - University", date: "Together with Batch 2 and the Chief Product Officer - Nov 20, 2025" },
+
+            // CIT-U LIBRARY
+            { id: 55, src: "lib cit.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "Exploring the CIT-U Library After Our Meeting with the CPO - Nov 20, 2025" },
+            { id: 56, src: "lib cit2.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "Exploring the CIT-U Library After Our Meeting with the CPO - Nov 20, 2025" },
+            { id: 57, src: "lib cit3.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "Exploring the CIT-U Library After Our Meeting with the CPO - Nov 20, 2025" },
+            { id: 58, src: "lib cit4.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "Exploring the CIT-U Library After Our Meeting with the CPO - Nov 20, 2025" },
+            { id: 59, src: "lib cit5.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "A Campus Library Tour at CIT-U - Nov 20, 2025" },
+            { id: 60, src: "lib cit6.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "A Campus Library Tour at CIT-U - Nov 20, 2025" },
+            { id: 61, src: "lib cit7.jpg", category: "cebu", location: "Cebu Institute of Technology - University", date: "A Campus Library Tour at CIT-U - Nov 20, 2025" },
+            
+            // LUNCH
+            { id: 62, src: "lunch.jpg", category: "cebu", location: "Buffet 101 - Mandaue Cebu", date: "Enjoying Lunch at 101 Buffet - Nov 20, 2025" },
+            { id: 63, src: "lunch2.jpg", category: "cebu", location: "Buffet 101 - Mandaue Cebu", date: "Enjoying Lunch at 101 Buffet - Nov 20, 2025" },
+            { id: 64, src: "lunch3.jpg", category: "cebu", location: "Buffet 101 - Mandaue Cebu", date: "Nov 20, 2025" },
+            { id: 65, src: "lunch4.jpg", category: "cebu", location: "Buffet 101 - Mandaue Cebu", date: "Nov 20, 2025" },
+
+            // RIVAN IT - BOTH CEBU AND COMPANIES
+            { id: 66, src: "rivan1.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 67, src: "rivan2.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 68, src: "rivan3.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 69, src: "rivan4.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Day 2 Company Visit: Rivan Cebu IT - Nov 20, 2025" },
+            { id: 70, src: "rivan5.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 71, src: "rivan6.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 72, src: "rivan7.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 73, src: "rivan8.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Exploring Rivan Cebu IT - Nov 20, 2025" },
+            { id: 74, src: "rivan9.jpg", category: "cebu", location: "Rivan IT Cebu", date: "Shell Yeah! Big Turtles Here - Nov 20, 2025" },
+            { id: 75, src: "rivan.jpg", category: ["cebu", "companies"], location: "Rivan IT Cebu", date: "Nov 20, 2025" },
+
+            // CEBU HISTORICAL SITES
+            { id: 76, src: "mg1.jpg", category: "cebu", location: "Magellan's Cross", date: "Exploring Magellan's Cross - Nov 20, 2025" },
+            { id: 77, src: "mg2.jpg", category: "cebu", location: "Magellan's Cross", date: "Nov 20, 2025" },
+            { id: 78, src: "cd.jpg", category: "cebu", location: "Colegio del Sto. Niño", date: "Visiting Colegio del Sto. Niño - Nov 20, 2025" }, 
+            { id: 79, src: "bd.jpg", category: "cebu", location: "Basilica Minore del Santo Niño", date: "Admiring the Beauty of Basilica Minore del Santo Niño - Nov 20, 2025" }, 
+            { id: 80, src: "s1.jpg", category: "cebu", location: "Basilica Minore del Santo Niño de Cebu Pilgrim Center", date: "Nov 20, 2025" }, 
+            { id: 81, src: "s4.jpg", category: "cebu", location: "Basilica Minore del Santo Niño de Cebu Pilgrim Center", date: "A Moment at Basilica Minore del Santo Niño - Nov 20, 2025" }, 
+            { id: 82, src: "s.jpg", category: "cebu", location: "Basilica Minore del Santo Niño", date: "Nov 20, 2025" }, 
+            { id: 83, src: "s3.jpg", category: "cebu", location: "Basilica Minore del Santo Niño", date: "Nov 20, 2025" }, 
+            { id: 84, src: "s2.jpg", category: "cebu", location: "Basilica Minore del Santo Niño", date: "Nov 20, 2025" }, 
+            { id: 85, src: "s5.jpg", category: "cebu", location: "Maritima Ruins", date: "Compañía Marítima Building - Nov 20, 2025" }, 
+            { id: 86, src: "s6.jpg", category: "cebu", location: "Pasalubong Center", date: "Shopping for Souvenirs at the Pasalubong Center - Nov 20, 2025" },
+
+            // CEBU DAY 3 - MATA TECHNOLOGIES
+            { id: 87, src: "DAY3 1.jpg", category: "cebu", location: "bai Hotel Cebu", date: "Day 3 Morning: Hotel Check-Out - Nov 21, 2025" },
+            { id: 88, src: "DAY3 2.jpg", category: "cebu", location: "bai Hotel Cebu", date: "Nov 21, 2025" },
+            { id: 89, src: "DAY3.jpg", category: "cebu", location: "bai Hotel Cebu", date: "Day 3 Morning: Hotel Check-Out - Nov 21, 2025" },
+            { id: 90, src: "DAY3 4.jpg", category: "cebu", location: "Mata Technologies Inc.", date: "Nov 21, 2025" },
+            { id: 91, src: "DAY3 5.jpg", category: "cebu", location: "Mata Technologies Inc.", date: "Handing Over Cebu Donations to Batch 1 - Nov 21, 2025" },
+            { id: 92, src: "DAY3 30.jpg", category: "cebu", location: "City Hall, Cebu City", date: "A Moment of Sharing Cebu Donations - Nov 21, 2025" },
+            { id: 93, src: "DAY3 31.jpg", category: "cebu", location: "City Hall, Cebu City", date: "A Moment of Sharing Cebu Donations - Nov 21, 2025" },
+            
+            // MATA TECHNOLOGIES - BOTH CEBU AND COMPANIES
+            { id: 94, src: "DAY3 6.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Day 3 Visit: Mata Technologies Inc. - Nov 21, 2025" },
+            { id: 95, src: "DAY3 3.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Just Arrived at Mata Technologies Inc. - Nov 21, 2025" },
+            { id: 96, src: "DAY3 7.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Mata Technologies Team Introduction - Nov 21, 2025" },
+            { id: 97, src: "DAY3 8.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Introduction to the SuRoy Cebu Website Map - Nov 21, 2025" },
+            { id: 98, src: "DAY3 9.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Introduction to the SuRoy Cebu Website Map - Nov 21, 2025" },
+            { id: 99, src: "DAY3 10.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Trying Out VR Technology - Nov 21, 2025" },
+            { id: 100, src: "DAY3 11.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Mata Technologies Shares Their Projects - Nov 21, 2025" },
+            { id: 101, src: "DAY 12.jpg", category: ["cebu", "companies"], location: "Mata Technologies Inc.", date: "Mata Technologies Team Introduction - Nov 21, 2025" },
+
+            // CEBU LUNCH
+            { id: 102, src: "DAY3 12.jpg", category: "cebu", location: "Vikings Luxury Buffet", date: "Enjoying Our Last Lunch in Cebu - Nov 21, 2025" },
+            { id: 103, src: "DAY3 13.jpg", category: "cebu", location: "Vikings Luxury Buffet", date: "Enjoying Our Last Lunch in Cebu - Nov 21, 2025" },
+
+            // CEBU TO BOHOL TRAVEL
+            { id: 104, src: "DAY3 14.jpg", category: "cebu", location: "Pier 3 Terminal, Cebu Port", date: "Starting Our Journey to Bohol on OceanJet - Nov 21, 2025" },
+            { id: 105, src: "DAY3 15.jpg", category: "cebu", location: "Pier 3 Terminal, Cebu Port", date: "Starting Our Journey to Bohol on OceanJet - Nov 21, 2025" },
+            { id: 106, src: "DAY3 16.jpg", category: "cebu", location: "Pier 3 Terminal, Cebu Port", date: "Starting Our Journey to Bohol on OceanJet - Nov 21, 2025" },
+            { id: 107, src: "DAY3 17.jpg", category: "cebu", location: "Pier 3 Terminal, Cebu Port", date: "Starting Our Journey to Bohol on OceanJet - Nov 21, 2025" },
+            { id: 108, src: "DAY3 18.jpg", category: "cebu", location: "Oceanjet", date: "Starting Our Journey to Bohol on OceanJet - Nov 21, 2025" },
+            { id: 109, src: "DAY3 19.jpg", category: "cebu", location: "Oceanjet", date: "Starting Our Journey to Bohol on OceanJet - Nov 21, 2025" },
+
+            // BOHOL ARRIVAL
+            { id: 110, src: "DAY3 20.jpg", category: "bohol", location: "Tagbilaran City Sea Port", date: "Welcome to Bohol - Nov 21, 2025" },
+            { id: 111, src: "DAY3 21.jpg", category: "bohol", location: "Tagbilaran City Sea Port", date: "Just Arrived in Tagbilaran, Bohol - Nov 21, 2025" },
+            { id: 112, src: "DAY3 22.jpg", category: "bohol", location: "Tagbilaran City Sea Port", date: "Just Arrived in Tagbilaran, Bohol - Nov 21, 2025" },
+            { id: 113, src: "DAY3 23.jpg", category: "bohol", location: "Panglao Vista Suites", date: "Checking In at Bohol Vistá Suites - Nov 21, 2025" },
+            { id: 114, src: "DAY3 24.jpg", category: "bohol", location: "Panglao Vista Suites", date: "Welcomed by the Bohol Vistá Suites Staff - Nov 21, 2025" },
+            { id: 115, src: "DAY3 25.jpg", category: "bohol", location: "Panglao Vista Suites", date: "Nov 21, 2025" },
+            { id: 116, src: "DAY3 26.jpg", category: "bohol", location: "Panglao Vista Suites", date: "Dinner Prepared for Us by Bohol Vistá Suites - Nov 21, 2025" },
+            { id: 117, src: "DAY3 27.jpg", category: "bohol", location: "Panglao Vista Suites", date: "Night View from Our Room - Nov 21, 2025" },
+
+            // BOHOL DAY 4 - TAGBILARAN 911
+            { id: 118, src: "DAY4.jpg", category: "bohol", location: "", date: "On the Way to Our Last Company Visit - Nov 22, 2025" },
+            
+            // TAGBILARAN 911 - BOTH BOHOL AND COMPANIES
+            { id: 119, src: "DAY4 1.jpg", category: ["bohol", "companies"], location: "Tagbilaran City", date: "Arriving at Tagbilaran 911 - Nov 22, 2025" },
+            { id: 120, src: "DAY4 2.jpg", category: ["bohol", "companies"], location: "Tagbilaran City", date: "Introduction to the Work and Roles of Tagbilaran 911 - Nov 22, 2025" },
+            { id: 121, src: "DAY43.jpg", category: ["bohol", "companies"], location: "Tagbilaran City", date: "Briefing on the Operations and Responsibilities of Tagbilaran 911 - Nov 22, 2025" },
+            { id: 122, src: "day4 2.jpg", category: ["bohol", "companies"], location: "Tagbilaran City", date: "Briefing on the Operations and Responsibilities of Tagbilaran 911 - Nov 22, 2025" },
+            { id: 123, src: "day4 3.jpg", category: ["bohol", "companies"], location: "Tagbilaran City", date: "Briefing on the Operations and Responsibilities of Tagbilaran 911 - Nov 22, 2025" },
+            { id: 124, src: "DAY4 6.jpg", category: ["bohol", "companies"], location: "Tagbilaran City", date: "Briefing on the Operations and Responsibilities of Tagbilaran 911 - Nov 22, 2025" },
+            { id: 125, src: "day4 4.jpg", category: "bohol", location: "Tagbilaran City", date: "Nov 22, 2025" },
+
+            // BOHOL TOURIST SITES
+            { id: 126, src: "BOHOL.jpg", category: "bohol", location: "Chocolate Hills", date: "Nov 22, 2025" },
+            { id: 127, src: "BOHOL1.jpg", category: "bohol", location: "Chocolate Hills", date: "Nov 22, 2025" },
+            { id: 128, src: "BOHOL2.jpg", category: "bohol", location: "Chocolate Hills", date: "Nov 22, 2025" },
+            { id: 129, src: "BOHOL3.jpg", category: "bohol", location: "Chocolate Hills", date: "Nov 22, 2025" },
+            { id: 130, src: "BOHOL4.jpg", category: "bohol", location: "Tarsier Sunctuary Rd", date: "Nov 22, 2025" },
+            { id: 131, src: "BOHOL5.jpg", category: "bohol", location: "Tarsier Sunctuary Rd", date: "Nov 22, 2025" },
+            { id: 132, src: "BOHOL6.jpg", category: "bohol", location: "Bilar Man-Made Forest", date: "Nov 22, 2025" },
+            { id: 133, src: "BOHOL7.jpg", category: "bohol", location: "Bilar Man-Made Forest", date: "Nov 22, 2025" },
+            { id: 134, src: "BOHOL8.jpg", category: "bohol", location: "Loboc River Cruise", date: "Nov 22, 2025" },
+            { id: 135, src: "BOHOL9.jpg", category: "bohol", location: "Loboc River Cruise", date: "Nov 22, 2025" },
+            { id: 136, src: "BOHOL10.jpg", category: "bohol", location: "Loboc River Cruise", date: "Nov 22, 2025" },
+            { id: 137, src: "BOHOL11.jpg", category: "bohol", location: "Loboc River Cruise", date: "Nov 22, 2025" },
+            { id: 138, src: "BOHOL12.jpg", category: "bohol", location: "Loboc River Cruise", date: "Nov 22, 2025" },
+            { id: 139, src: "BOHOL13.jpg", category: "bohol", location: "Sikatuna Mirror of The World", date: "Nov 22, 2025" },
+            { id: 140, src: "BOHOL14.jpg", category: "bohol", location: "Sikatuna Mirror of The World", date: "Nov 22, 2025" },
+            { id: 141, src: "BOHOL15.jpg", category: "bohol", location: "Sikatuna Mirror of The World", date: "Nov 22, 2025" },
+            { id: 142, src: "BOHOL19.jpg", category: "bohol", location: "Birthday Gift I Received from Watt", date: "Nov 22, 2025" },
+
+            // DEPARTURE
+            { id: 143, src: "BOHOL16.jpg", category: "bohol", location: "Panglao International Airport", date: "Nov 22, 2025" },
+            { id: 144, src: "BOHOL17.jpg", category: "bohol", location: "Ninoy Aquino International Airport", date: "Nov 22, 2025" },
+            { id: 145, src: "BOHOL18.jpg", category: "bohol", location: "", date: "Heading Back to Davao<3 - Nov 23, 2025" },
+
+            // NEW: PRINTED JOURNAL CATEGORY
+            { id: 146, src: "pj.jpg", category: "journal", location: "WorldTeach Inc.", date: "Nov 19, 2025" },
+            { id: 147, src: "pj2.jpg", category: "journal", location: "Codechum", date: "Nov 20, 2025" },
+            { id: 148, src: "pj3.jpg", category: "journal", location: "Rivan Cebu IT", date: "Nov 20, 2025" },
+            { id: 149, src: "pj4.jpg", category: "journal", location: "Mata Technologies Inc.", date: "Nov 21, 2025" },
+            { id: 150, src: "pj5.jpg", category: "journal", location: "Tagbilaran 911", date: "Nov 22, 2025" },
+            { id: 151, src: "pj5.jpg", category: "journal", location: "Impression sheet", date: "Nov 19-22, 2025" },
+
+            // NEW: CERTIFICATES CATEGORY
+            { id: 152, src: "certificate.jpg", category: "certificates", location: "Codechum", date: "Dec 1, 2025"},
+            { id: 153, src: "wattcertificate.jpg", category: "certificates", location: "World of Adventures", date: "Nov 19-22, 2025"},
+
+        ];
+
+        // DOM Elements
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const startButton = document.getElementById('start-button');
+        const mainHeader = document.querySelector('.main-header');
+        const pageContainer = document.querySelector('.page-container');
+        const mainFooter = document.querySelector('.main-footer');
+        const navItems = document.querySelectorAll('.nav-item');
+        const contentSections = document.querySelectorAll('.content-section');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const photoGallery = document.getElementById('photo-gallery');
+        const loadMoreBtn = document.getElementById('load-more');
+        const photoCount = document.getElementById('photo-count');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        const companyTabs = document.querySelectorAll('.company-tab');
+        const companyJournals = document.querySelectorAll('.company-journal-content');
+
+        // PROFILE MODAL ELEMENTS
+        const profileTrigger = document.getElementById('profile-trigger');
+        const profileModal = document.getElementById('profile-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        // Gallery state
+        let currentFilter = 'all';
+        let displayedPhotos = 8;
+        const photosPerLoad = 8;
+        let currentLightboxIndex = 0;
+        let filteredPhotos = [];
+
+        // Initialize Website
+        function initWebsite() {
+            // Load initial photos
+            filteredPhotos = photoData;
+            renderPhotos();
+            updatePhotoCount();
+            
+            // FIX: Initialize company journals to show only the first one
+            companyJournals.forEach((journal, index) => {
+                if (index !== 0) {
+                    journal.style.display = 'none';
+                } else {
+                    journal.style.display = 'block';
+                }
+            });
+            
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        }
+
+        // Welcome Screen - Start Journey
+        startButton.addEventListener('click', () => {
+            welcomeScreen.style.opacity = '0';
+            setTimeout(() => {
+                welcomeScreen.style.display = 'none';
+                // Show the main content after welcome screen disappears
+                mainHeader.style.display = 'block';
+                pageContainer.style.display = 'flex';
+                mainFooter.style.display = 'block';
+            }, 500);
+        });
+
+        // Profile Picture Modal
+        profileTrigger.addEventListener('click', () => {
+            profileModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        modalClose.addEventListener('click', () => {
+            profileModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        profileModal.addEventListener('click', (e) => {
+            if (e.target === profileModal) {
+                profileModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && profileModal.classList.contains('active')) {
+                profileModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Sidebar Navigation
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all items
+                navItems.forEach(nav => nav.classList.remove('active'));
+                // Add active class to clicked item
+                item.classList.add('active');
+                
+                const targetSection = item.getAttribute('data-target');
+                showSection(targetSection);
+                
+                // FIX: Ensure gallery loads properly when navigated to
+                if (targetSection === 'gallery') {
+                    setTimeout(() => {
+                        renderPhotos();
+                        updatePhotoCount();
+                    }, 100);
+                }
+            });
+        });
+
+        // Show Specific Section
+        function showSection(sectionId) {
+            // Hide all sections
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                
+                // FIX: If showing company journal, ensure first tab is active
+                if (sectionId === 'company-journal') {
+                    setTimeout(() => {
+                        showCompanyJournal('worldtech');
+                        companyTabs.forEach((tab, index) => {
+                            tab.classList.remove('active');
+                            if (index === 0) tab.classList.add('active');
+                        });
+                    }, 50);
+                }
+            }
+        }
+
+        // Company Journal Tabs
+        companyTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                companyTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                const company = tab.getAttribute('data-company');
+                showCompanyJournal(company);
+            });
+        });
+
+        // Show Specific Company Journal
+        function showCompanyJournal(companyId) {
+            // Hide all company journals
+            companyJournals.forEach(journal => {
+                journal.style.display = 'none';
+            });
+            
+            // Show selected company journal
+            const targetJournal = document.getElementById(`${companyId}-journal`);
+            if (targetJournal) {
+                targetJournal.style.display = 'block';
+                targetJournal.style.animation = 'fadeIn 0.5s ease';
+            }
+        }
+
+        // FIXED GALLERY FILTERING - Now properly handles array categories
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                currentFilter = button.getAttribute('data-filter');
+                displayedPhotos = 8;
+                
+                // Filter photos - properly handles both string and array categories
+                if (currentFilter === 'all') {
+                    filteredPhotos = photoData;
+                } else {
+                    filteredPhotos = photoData.filter(photo => {
+                        // If category is an array, check if it contains the filter
+                        if (Array.isArray(photo.category)) {
+                            return photo.category.includes(currentFilter);
+                        }
+                        // If category is a string, check for exact match
+                        return photo.category === currentFilter;
+                    });
+                }
+                
+                // Render filtered photos
+                renderPhotos();
+                updatePhotoCount();
+                
+                // Show load more button if needed
+                loadMoreBtn.style.display = displayedPhotos >= filteredPhotos.length ? 'none' : 'block';
+            });
+        });
+
+        // Render Photos to Gallery
+        function renderPhotos() {
+            photoGallery.innerHTML = '';
+            
+            const photosToShow = filteredPhotos.slice(0, displayedPhotos);
+            
+            photosToShow.forEach((photo, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                
+                // Handle both string and array categories for data attribute
+                const categoryAttr = Array.isArray(photo.category) ? photo.category.join(' ') : photo.category;
+                galleryItem.setAttribute('data-category', categoryAttr);
+                galleryItem.setAttribute('data-index', index);
+                
+                galleryItem.innerHTML = `
+                    <img src="${photo.src}" alt="${photo.location}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="photo-location">${photo.location}</span>
+                        <span class="photo-date">${photo.date}</span>
+                    </div>
+                `;
+                
+                galleryItem.addEventListener('click', () => {
+                    openLightbox(index);
+                });
+                
+                photoGallery.appendChild(galleryItem);
+            });
+        }
+
+        // Update Photo Count
+        function updatePhotoCount() {
+            const totalPhotos = filteredPhotos.length;
+            const showing = Math.min(displayedPhotos, totalPhotos);
+            photoCount.textContent = `Showing ${showing} of ${totalPhotos} photos`;
+        }
+
+        // Load More Photos
+        loadMoreBtn.addEventListener('click', () => {
+            displayedPhotos += photosPerLoad;
+            renderPhotos();
+            updatePhotoCount();
+            
+            // Hide load more button if all photos are displayed
+            if (displayedPhotos >= filteredPhotos.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const photo = filteredPhotos[currentLightboxIndex];
+            
+            lightboxImg.src = photo.src;
+            lightboxCaption.textContent = `${photo.location} - ${photo.date}`;
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigateLightbox(direction) {
+            if (direction === 'prev') {
+                currentLightboxIndex = (currentLightboxIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
+            } else {
+                currentLightboxIndex = (currentLightboxIndex + 1) % filteredPhotos.length;
+            }
+            
+            const photo = filteredPhotos[currentLightboxIndex];
+            lightboxImg.src = photo.src;
+            lightboxCaption.textContent = `${photo.location} - ${photo.date}`;
+        }
+
+        // Lightbox Event Listeners
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => navigateLightbox('prev'));
+        lightboxNext.addEventListener('click', () => navigateLightbox('next'));
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                navigateLightbox('prev');
+            } else if (e.key === 'ArrowRight') {
+                navigateLightbox('next');
+            }
+        });
+
+        // Thank You Button
+        document.getElementById('thankyou-trigger').addEventListener('click', () => {
+            alert('Thank you for exploring my educational tour journey! This collection represents unforgettable memories and learning experiences from our Cebu-Bohol adventure.');
+        });
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initWebsite);
+
+        console.log("Tour Journal Website loaded successfully!");
+        console.log("All 5 company journals have been integrated:");
+        console.log("1. WorldTech - Cybersecurity solutions");
+        console.log("2. CodeChum - Educational technology platform");
+        console.log("3. Rivan IT Cebu - IT networking training");
+        console.log("4. Mata Technologies - Virtual reality tours");
+        console.log("5. T.A.R.S.L.E.R. 117 - Emergency response unit");
+        console.log("Company photos count:", photoData.filter(p => Array.isArray(p.category) && p.category.includes("companies")).length);
+        console.log("New categories added:");
+        console.log("- Printed Journal: 5 photos");
+        console.log("- Certificates: 6 photos");
+        console.log("Profile modal functionality added!");
+        console.log("Fixed scrolling issue: Sidebar and main content now scroll independently.");
+    </script>
+</body>
+</html>
